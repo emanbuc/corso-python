@@ -4,15 +4,18 @@ def lookup_acronym():
     found= False
     print(f"Looking for acronym: {look_up}")
 
-    with open('acronyms.txt') as file:
-        for line in file:
-            print(f"Checking line: {line.strip()}")
-            if look_up in line:
-                found = True
-                print(f"Acronym found: {line.strip()}")
-                break
-    if not found:
-        print("Acronym not found.")
+    try:
+        with open('acronyms.txt') as file:
+            for line in file:
+                print(f"Checking line: {line.strip()}")
+                if look_up in line:
+                    found = True
+                    print(f"Acronym found: {line.strip()}")
+                    break
+        if not found:
+            print("Acronym not found.")
+    except FileNotFoundError:
+        print("Acronyms file not found. Please ensure it exists.")
 
 
 

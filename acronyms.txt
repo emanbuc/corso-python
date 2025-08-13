@@ -1,5 +1,1 @@
-ML - Machine LEarning
-DL - Deep Learning
-IDE - Integrated Development Environment
-AI - Artificial Intelligence
-SAAS - Software as a service
+IDE
